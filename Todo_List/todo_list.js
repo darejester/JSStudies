@@ -9,6 +9,8 @@ addButton.addEventListener('click', () => {
         listItem.textContent = taskText;
 
         const deleteButton = document.createElement('button');
+
+        //this needs to be inside because the declaration of "textContent is local to this block"
         deleteButton.textContent = 'Delete';
         deleteButton.addEventListener('click', () => {
             listItem.remove();
